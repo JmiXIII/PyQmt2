@@ -38,8 +38,10 @@ def file2df(elmnt):
     return data
 #
 
+a = scan(path, 'log', '*108898*',None)
 dfs = []
 for file in a:
+    try:
         df = file2df(file)
         df.c_6.astype(np.float)
         df.c_5.astype(np.float)
@@ -49,9 +51,11 @@ for file in a:
 data = pd.concat(dfs)
 data.c_6 = data.c_6.astype(np.float)
 data.c_5 = data.c_5.astype(np.float)
+grouped = data.groupby('c_0', as_index=True)
 mean = grouped.c_5.mean().get_values()
 std = grouped.c_5.std().get_values()
 xx = [x for x in range(len(mean))]
+y = [x for x in grouped.size().index]
 plt.figure(1)
 g1 = plt.plot(mean)
 plt.fill_between(xx, mean-3*std,
@@ -59,8 +63,11 @@ plt.fill_between(xx, mean-3*std,
 plt.figure(2)
 plt.style.use('seaborn-paper')
 sbn.distplot(data.c_5)
+fig, ax = plt.subplots(1, 1)
+plt.figure(3, figsize=(12, 3))
 g2 = sbn.stripplot(data.c_5, jitter=True)
-#g2.axes.set_xlim(3.95,4.10)
+# g2.axes.set_xticks(np.linspace(3.95,4.10,16,endpoint=True))
+# g2.axes.set_xlim(3.95,4.10)
 
 
 
