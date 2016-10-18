@@ -1,0 +1,11 @@
+Reference Name	807677
+***
+Mesure					Pres piece	Ø5.35	Ø4.02	L3.5	L6.4	Moletage	Empreinte	Surface	Nbre lobes	Pres piece	Ø5.35	Ø4.02	L3.5	L6.4
+Unit						mm	mm	mm	mm			mm2	u		mm	mm	mm	mm
+Consigne					TRUE	5.350	4.0200	3.500	6.400	TRUE	TRUE	4.00	6	FALSE	5.351	4.0260	3.496	6.396
+Tol.Min						-0.040	-0.0130	-0.100	-0.100		Actif	0.00	0		-0.010	-0.0100	-0.010	-0.010
+Tol.Max						0.050	0.0100	0.100	0.100			1.10	0		0.010	0.0100	0.010	0.010
+Offset					0	-0.003	-0.0080	0.000	-0.005	0	0	0.00	0	0	-0.003	-0.0080	0.000	-0.005
+---
+Date	Time	Operator	Remarque	Status	Pres piece	Ø5.35	Ø4.02	L3.5	L6.4	Moletage	Empreinte	Surface	Nbre lobes	Pres piece	Ø5.35	Ø4.02	L3.5	L6.4
+						mm	mm	mm	mm			mm2	u		mm	mm	mm	mm
